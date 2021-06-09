@@ -1,0 +1,7 @@
+|test1
+Q0 <= Q0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= Q1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+A => Q0~reg0.CLK
+B => Q1~reg0.CLK
+
+

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at changeable_counter.v(87): always construct contains both blocking and non-blocking assignments File: D:/intelFPGA_lite/Project/changeable_counter/changeable_counter.v Line: 87

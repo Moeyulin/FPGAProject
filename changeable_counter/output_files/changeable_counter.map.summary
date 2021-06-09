@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Jun 09 22:42:37 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : changeable_counter
+Top-level Entity Name : changeable_counter
+Family : MAX 10
+Total logic elements : 66
+    Total combinational functions : 66
+    Dedicated logic registers : 34
+Total registers : 34
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

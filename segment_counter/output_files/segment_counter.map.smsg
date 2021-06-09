@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at segment_counter.v(74): always construct contains both blocking and non-blocking assignments File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 74

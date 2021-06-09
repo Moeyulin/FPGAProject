@@ -1,0 +1,9 @@
+|new_project
+A => Y1.IN0
+A => comb.IN0
+B => Y1.IN1
+B => comb.IN1
+Y1 <= Y1.DB_MAX_OUTPUT_PORT_TYPE
+Y2 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

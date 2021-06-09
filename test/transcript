@@ -1,0 +1,104 @@
+# do temp_simlib_comp.tmp
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:58:14 on May 12,2021
+# vlog -work fiftyfivenm_ver -vlog01compat d:/intelfpga_lite/17.1/quartus/eda/sim_lib/fiftyfivenm_atoms.v 
+# -- Compiling UDP FIFTYFIVENM_PRIM_DFFE
+# -- Compiling UDP FIFTYFIVENM_PRIM_DFFEAS
+# -- Compiling UDP FIFTYFIVENM_PRIM_DFFEAS_HIGH
+# -- Compiling module fiftyfivenm_dffe
+# -- Compiling module fiftyfivenm_mux21
+# -- Compiling module fiftyfivenm_mux41
+# -- Compiling module fiftyfivenm_and1
+# -- Compiling module fiftyfivenm_and16
+# -- Compiling module fiftyfivenm_bmux21
+# -- Compiling module fiftyfivenm_b17mux21
+# -- Compiling module fiftyfivenm_nmux21
+# -- Compiling module fiftyfivenm_b5mux21
+# -- Compiling module fiftyfivenm_latch
+# -- Compiling module fiftyfivenm_routing_wire
+# -- Compiling module fiftyfivenm_lcell_comb
+# -- Compiling module fiftyfivenm_ff
+# -- Compiling module fiftyfivenm_ram_pulse_generator
+# -- Compiling module fiftyfivenm_ram_register
+# -- Compiling module fiftyfivenm_ram_block
+# -- Compiling module fiftyfivenm_mac_data_reg
+# -- Compiling module fiftyfivenm_mac_sign_reg
+# -- Compiling module fiftyfivenm_mac_mult_internal
+# -- Compiling module fiftyfivenm_mac_mult
+# -- Compiling module fiftyfivenm_mac_out
+# -- Compiling module fiftyfivenm_pseudo_diff_out
+# -- Compiling module fiftyfivenm_io_pad
+# -- Compiling module fiftyfivenm_m_cntr
+# -- Compiling module fiftyfivenm_n_cntr
+# -- Compiling module fiftyfivenm_scale_cntr
+# -- Compiling module fiftyfivenm_pll_reg
+# -- Compiling module fiftyfivenm_pll
+# -- Compiling module fiftyfivenm_ena_reg
+# -- Compiling module fiftyfivenm_clkctrl
+# -- Compiling module fiftyfivenm_io_latch
+# -- Compiling module fiftyfivenm_phy_clkbuf
+# -- Compiling module fiftyfivenm_io_clock_divider
+# -- Compiling module fiftyfivenm_io_ibuf
+# -- Compiling module fiftyfivenm_io_obuf
+# -- Compiling module fiftyfivenm_ddio_out
+# -- Compiling module fiftyfivenm_ddio_oe
+# -- Compiling module fiftyfivenm_ddio_in
+# -- Compiling module fiftyfivenm_unvm
+# -- Compiling module fiftyfivenm_asmiblock
+# -- Compiling module fiftyfivenm_chipidblock
+# -- Compiling module fiftyfivenm_oscillator
+# -- Compiling module fiftyfivenm_controller
+# -- Compiling module fiftyfivenm_crcblock
+# -- Compiling module fiftyfivenm_rublock
+# -- Compiling module fiftyfivenm_jtag
+# -- Compiling module fiftyfivenm_adcblock
+# -- Compiling module fiftyfivenm_phase_detector
+# 
+# Top level modules:
+# 	fiftyfivenm_dffe
+# 	fiftyfivenm_mux21
+# 	fiftyfivenm_and1
+# 	fiftyfivenm_and16
+# 	fiftyfivenm_bmux21
+# 	fiftyfivenm_b17mux21
+# 	fiftyfivenm_nmux21
+# 	fiftyfivenm_b5mux21
+# 	fiftyfivenm_latch
+# 	fiftyfivenm_routing_wire
+# 	fiftyfivenm_lcell_comb
+# 	fiftyfivenm_ff
+# 	fiftyfivenm_ram_block
+# 	fiftyfivenm_mac_mult
+# 	fiftyfivenm_mac_out
+# 	fiftyfivenm_pseudo_diff_out
+# 	fiftyfivenm_io_pad
+# 	fiftyfivenm_pll_reg
+# 	fiftyfivenm_pll
+# 	fiftyfivenm_clkctrl
+# 	fiftyfivenm_io_latch
+# 	fiftyfivenm_phy_clkbuf
+# 	fiftyfivenm_io_clock_divider
+# 	fiftyfivenm_io_ibuf
+# 	fiftyfivenm_io_obuf
+# 	fiftyfivenm_ddio_out
+# 	fiftyfivenm_ddio_oe
+# 	fiftyfivenm_ddio_in
+# 	fiftyfivenm_unvm
+# 	fiftyfivenm_asmiblock
+# 	fiftyfivenm_chipidblock
+# 	fiftyfivenm_oscillator
+# 	fiftyfivenm_controller
+# 	fiftyfivenm_crcblock
+# 	fiftyfivenm_rublock
+# 	fiftyfivenm_jtag
+# 	fiftyfivenm_adcblock
+# 	fiftyfivenm_phase_detector
+# End time: 18:58:15 on May 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:58:15 on May 12,2021
+# vlog -work fiftyfivenm_ver -vlog01compat d:/intelfpga_lite/17.1/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v 
+# 
+# Top level modules:
+# End time: 18:58:20 on May 12,2021, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0

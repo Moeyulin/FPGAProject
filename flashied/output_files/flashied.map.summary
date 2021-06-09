@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Jun 07 19:57:29 2021
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : flashied
+Top-level Entity Name : flashied
+Family : MAX 10
+Total logic elements : 71
+    Total combinational functions : 71
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, D:/intelFPGA_lite/Project/test4/test4.v
+source_file = 1, D:/intelFPGA_lite/Project/test4/db/test4.cbx.xml
+design_name = test4
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, test4, 1
+instance = comp, \clk_out~output , clk_out~output, test4, 1
+instance = comp, \clk~input , clk~input, test4, 1
+instance = comp, \rst~input , rst~input, test4, 1
+instance = comp, \~QUARTUS_CREATED_UNVM~ , ~QUARTUS_CREATED_UNVM~, test4, 1
+design_name = hard_block
+instance = comp, \~ALTERA_TMS~~ibuf , ~ALTERA_TMS~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_TCK~~ibuf , ~ALTERA_TCK~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_TDI~~ibuf , ~ALTERA_TDI~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_CONFIG_SEL~~ibuf , ~ALTERA_CONFIG_SEL~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_nCONFIG~~ibuf , ~ALTERA_nCONFIG~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_nSTATUS~~ibuf , ~ALTERA_nSTATUS~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_CONF_DONE~~ibuf , ~ALTERA_CONF_DONE~~ibuf, hard_block, 1

@@ -1,0 +1,474 @@
+Analysis & Synthesis report for segment_counter
+Tue Jun 08 00:47:28 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |segment_counter
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jun 08 00:47:28 2021       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; segment_counter                             ;
+; Top-level Entity Name              ; segment_counter                             ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 125                                         ;
+;     Total combinational functions  ; 125                                         ;
+;     Dedicated logic registers      ; 38                                          ;
+; Total registers                    ; 38                                          ;
+; Total pins                         ; 29                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M02SCM153C8G     ;                    ;
+; Top-level entity name                                                      ; segment_counter    ; segment_counter    ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; segment_counter.v                ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/Project/segment_counter/segment_counter.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 125       ;
+;                                             ;           ;
+; Total combinational functions               ; 125       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 43        ;
+;     -- 3 input functions                    ; 34        ;
+;     -- <=2 input functions                  ; 48        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 75        ;
+;     -- arithmetic mode                      ; 50        ;
+;                                             ;           ;
+; Total registers                             ; 38        ;
+;     -- Dedicated logic registers            ; 38        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 29        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 25        ;
+; Total fan-out                               ; 531       ;
+; Average fan-out                             ; 2.40      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
+; |segment_counter           ; 125 (125)           ; 38 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |segment_counter    ; segment_counter ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; led[0]$latch                                       ; cnt_fen[3]          ; yes                    ;
+; led[1]$latch                                       ; cnt_fen[3]          ; yes                    ;
+; led[2]$latch                                       ; cnt_fen[3]          ; yes                    ;
+; led[3]$latch                                       ; cnt_fen[3]          ; yes                    ;
+; led[4]$latch                                       ; cnt_fen[3]          ; yes                    ;
+; led[5]$latch                                       ; cnt_fen[3]          ; yes                    ;
+; led[6]$latch                                       ; cnt_fen[3]          ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                            ;
++----------------------------------------+--------------------------------------+
+; Register name                          ; Reason for Removal                   ;
++----------------------------------------+--------------------------------------+
+; seg~0                                  ; Stuck at GND due to stuck port clock ;
+; seg~1                                  ; Stuck at GND due to stuck port clock ;
+; seg~2                                  ; Stuck at GND due to stuck port clock ;
+; seg~3                                  ; Stuck at GND due to stuck port clock ;
+; seg~4                                  ; Stuck at GND due to stuck port clock ;
+; seg~5                                  ; Stuck at GND due to stuck port clock ;
+; seg~6                                  ; Stuck at GND due to stuck port clock ;
+; seg~7                                  ; Stuck at GND due to stuck port clock ;
+; seg~8                                  ; Stuck at GND due to stuck port clock ;
+; seg~9                                  ; Stuck at GND due to stuck port clock ;
+; seg~10                                 ; Stuck at GND due to stuck port clock ;
+; seg~11                                 ; Stuck at GND due to stuck port clock ;
+; seg~12                                 ; Stuck at GND due to stuck port clock ;
+; seg~13                                 ; Stuck at GND due to stuck port clock ;
+; seg~14                                 ; Stuck at GND due to stuck port clock ;
+; seg~15                                 ; Stuck at GND due to stuck port clock ;
+; seg~16                                 ; Stuck at GND due to stuck port clock ;
+; seg~17                                 ; Stuck at GND due to stuck port clock ;
+; seg~18                                 ; Stuck at GND due to stuck port clock ;
+; seg~19                                 ; Stuck at GND due to stuck port clock ;
+; seg~20                                 ; Stuck at GND due to stuck port clock ;
+; seg~21                                 ; Stuck at GND due to stuck port clock ;
+; seg~22                                 ; Stuck at GND due to stuck port clock ;
+; seg~23                                 ; Stuck at GND due to stuck port clock ;
+; seg~24                                 ; Stuck at GND due to stuck port clock ;
+; seg~25                                 ; Stuck at GND due to stuck port clock ;
+; seg~26                                 ; Stuck at GND due to stuck port clock ;
+; seg~27                                 ; Stuck at GND due to stuck port clock ;
+; seg~28                                 ; Stuck at GND due to stuck port clock ;
+; seg~29                                 ; Stuck at GND due to stuck port clock ;
+; seg~30                                 ; Stuck at GND due to stuck port clock ;
+; seg~31                                 ; Stuck at GND due to stuck port clock ;
+; seg~32                                 ; Stuck at GND due to stuck port clock ;
+; seg~33                                 ; Stuck at GND due to stuck port clock ;
+; seg~34                                 ; Stuck at GND due to stuck port clock ;
+; seg~35                                 ; Stuck at GND due to stuck port clock ;
+; seg~36                                 ; Stuck at GND due to stuck port clock ;
+; seg~37                                 ; Stuck at GND due to stuck port clock ;
+; seg~38                                 ; Stuck at GND due to stuck port clock ;
+; seg~39                                 ; Stuck at GND due to stuck port clock ;
+; seg~40                                 ; Stuck at GND due to stuck port clock ;
+; seg~41                                 ; Stuck at GND due to stuck port clock ;
+; seg~42                                 ; Stuck at GND due to stuck port clock ;
+; seg~43                                 ; Stuck at GND due to stuck port clock ;
+; seg~44                                 ; Stuck at GND due to stuck port clock ;
+; seg~45                                 ; Stuck at GND due to stuck port clock ;
+; seg~46                                 ; Stuck at GND due to stuck port clock ;
+; seg~47                                 ; Stuck at GND due to stuck port clock ;
+; seg~48                                 ; Stuck at GND due to stuck port clock ;
+; seg~49                                 ; Stuck at GND due to stuck port clock ;
+; seg~50                                 ; Stuck at GND due to stuck port clock ;
+; seg~51                                 ; Stuck at GND due to stuck port clock ;
+; seg~52                                 ; Stuck at GND due to stuck port clock ;
+; seg~53                                 ; Stuck at GND due to stuck port clock ;
+; seg~54                                 ; Stuck at GND due to stuck port clock ;
+; seg~55                                 ; Stuck at GND due to stuck port clock ;
+; seg~56                                 ; Stuck at GND due to stuck port clock ;
+; seg~57                                 ; Stuck at GND due to stuck port clock ;
+; seg~58                                 ; Stuck at GND due to stuck port clock ;
+; seg~59                                 ; Stuck at GND due to stuck port clock ;
+; seg~60                                 ; Stuck at GND due to stuck port clock ;
+; seg~61                                 ; Stuck at GND due to stuck port clock ;
+; seg~62                                 ; Stuck at GND due to stuck port clock ;
+; seg~63                                 ; Stuck at GND due to stuck port clock ;
+; seg~64                                 ; Stuck at GND due to stuck port clock ;
+; seg~65                                 ; Stuck at GND due to stuck port clock ;
+; seg~66                                 ; Stuck at GND due to stuck port clock ;
+; seg~67                                 ; Stuck at GND due to stuck port clock ;
+; seg~68                                 ; Stuck at GND due to stuck port clock ;
+; seg~69                                 ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 70 ;                                      ;
++----------------------------------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                      ;
++---------------+-------------------------+----------------------------------------+
+; Register name ; Reason for Removal      ; Registers Removed due to This Register ;
++---------------+-------------------------+----------------------------------------+
+; seg~0         ; Stuck at GND            ; seg~7                                  ;
+;               ; due to stuck port clock ;                                        ;
+; seg~1         ; Stuck at GND            ; seg~8                                  ;
+;               ; due to stuck port clock ;                                        ;
+; seg~2         ; Stuck at GND            ; seg~9                                  ;
+;               ; due to stuck port clock ;                                        ;
+; seg~3         ; Stuck at GND            ; seg~10                                 ;
+;               ; due to stuck port clock ;                                        ;
+; seg~4         ; Stuck at GND            ; seg~11                                 ;
+;               ; due to stuck port clock ;                                        ;
+; seg~5         ; Stuck at GND            ; seg~12                                 ;
+;               ; due to stuck port clock ;                                        ;
+; seg~6         ; Stuck at GND            ; seg~13                                 ;
+;               ; due to stuck port clock ;                                        ;
++---------------+-------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |segment_counter|cnt_shi[0] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |segment_counter|cnt[20]    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |segment_counter|cnt_ge[0]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |segment_counter ;
++----------------+--------+-------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                  ;
++----------------+--------+-------------------------------------------------------+
+; PERIOD         ; 750000 ; Signed Integer                                        ;
++----------------+--------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 29                          ;
+; cycloneiii_ff         ; 38                          ;
+;     CLR               ; 7                           ;
+;     ENA CLR           ; 5                           ;
+;     SCLR              ; 24                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 139                         ;
+;     arith             ; 50                          ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 14                          ;
+;     normal            ; 89                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 43                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.70                        ;
+; Average LUT depth     ; 3.86                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Jun 08 00:46:52 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off segment_counter -c segment_counter
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (10238): Verilog Module Declaration warning at segment_counter.v(9): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "segment_counter" File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file segment_counter.v
+    Info (12023): Found entity 1: segment_counter File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 1
+Info (12127): Elaborating entity "segment_counter" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at segment_counter.v(55): truncated value with size 32 to match size of target (24) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 55
+Warning (10230): Verilog HDL assignment warning at segment_counter.v(83): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 83
+Warning (10230): Verilog HDL assignment warning at segment_counter.v(84): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 84
+Warning (10230): Verilog HDL assignment warning at segment_counter.v(88): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 88
+Warning (10230): Verilog HDL assignment warning at segment_counter.v(98): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 98
+Warning (10240): Verilog HDL Always Construct warning at segment_counter.v(100): inferring latch(es) for variable "led", which holds its previous value in one or more paths through the always construct File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Warning (10030): Net "seg.data_a" at segment_counter.v(20) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 20
+Warning (10030): Net "seg.waddr_a" at segment_counter.v(20) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 20
+Warning (10030): Net "seg.we_a" at segment_counter.v(20) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 20
+Info (10041): Inferred latch for "led[0]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (10041): Inferred latch for "led[1]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (10041): Inferred latch for "led[2]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (10041): Inferred latch for "led[3]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (10041): Inferred latch for "led[4]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (10041): Inferred latch for "led[5]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (10041): Inferred latch for "led[6]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (10041): Inferred latch for "led[7]" at segment_counter.v(100) File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (10) in the Memory Initialization File "D:/intelFPGA_lite/Project/segment_counter/db/segment_counter.ram0_segment_counter_cb41279d.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276013): RAM logic "seg" is uninferred because MIF is not supported for the selected family File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 20
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_led_1[7]" is stuck at GND File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 14
+    Warning (13410): Pin "seg_led_1[8]" is stuck at GND File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 14
+    Warning (13410): Pin "seg_led_2[7]" is stuck at GND File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 14
+    Warning (13410): Pin "seg_led_2[8]" is stuck at GND File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 14
+    Warning (13410): Pin "led[7]" is stuck at VCC File: D:/intelFPGA_lite/Project/segment_counter/segment_counter.v Line: 100
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/intelFPGA_lite/Project/segment_counter/output_files/segment_counter.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 155 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 126 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Tue Jun 08 00:47:28 2021
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:01:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/intelFPGA_lite/Project/segment_counter/output_files/segment_counter.map.smsg.
+
+

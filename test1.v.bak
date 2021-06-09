@@ -1,0 +1,16 @@
+module test1(output reg Q0,Q1,Q1not,Q0not, input D0,D1, input A,B,Rd);
+	assign Q0not = ~Q0;
+	assign Q1not = ~Q1;
+	assign D0 = Q0not;
+	assign D1 = Q0 & Q1not;
+	assign Rd = Q1not;
+	always @ (posedge A, negedge Rd)
+		if (~Rd) begin
+			Q0 <= 1'b1; end
+		else begin
+			Q0 <= D0; end
+	always @ (posedge B)
+		Q1 <= D1;
+endmodule
+		
+			

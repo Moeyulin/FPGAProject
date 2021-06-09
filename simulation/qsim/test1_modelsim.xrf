@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, D:/intelFPGA_lite/Project/test1.v
+source_file = 1, D:/intelFPGA_lite/Project/Waveform.vwf
+source_file = 1, D:/intelFPGA_lite/Project/db/test1.cbx.xml
+design_name = test1
+instance = comp, \Q0~output , Q0~output, test1, 1
+instance = comp, \Q1~output , Q1~output, test1, 1
+instance = comp, \A~input , A~input, test1, 1
+instance = comp, \B~input , B~input, test1, 1
+instance = comp, \Q1~0 , Q1~0, test1, 1
+instance = comp, \Q1~reg0 , Q1~reg0, test1, 1
+instance = comp, \Q0~0 , Q0~0, test1, 1
+instance = comp, \Q0~reg0 , Q0~reg0, test1, 1
