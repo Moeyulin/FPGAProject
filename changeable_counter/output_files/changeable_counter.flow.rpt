@@ -1,5 +1,5 @@
 Flow report for changeable_counter
-Wed Jun 09 22:43:13 2021
+Fri Jun 18 20:12:04 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 09 22:43:13 2021       ;
+; Flow Status                        ; Successful - Fri Jun 18 20:12:04 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; changeable_counter                          ;
 ; Top-level Entity Name              ; changeable_counter                          ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M02SCM153C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 72 / 2,304 ( 3 % )                          ;
-;     Total combinational functions  ; 67 / 2,304 ( 3 % )                          ;
-;     Dedicated logic registers      ; 34 / 2,304 ( 1 % )                          ;
-; Total registers                    ; 34                                          ;
-; Total pins                         ; 23 / 112 ( 21 % )                           ;
+; Total logic elements               ; 271 / 2,304 ( 12 % )                        ;
+;     Total combinational functions  ; 269 / 2,304 ( 12 % )                        ;
+;     Dedicated logic registers      ; 91 / 2,304 ( 4 % )                          ;
+; Total registers                    ; 91                                          ;
+; Total pins                         ; 36 / 112 ( 32 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 110,592 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 32 ( 0 % )                              ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/09/2021 22:42:10 ;
+; Start date & time ; 06/18/2021 20:10:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; changeable_counter  ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 167690709091374.162324972914632        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 167690709091374.162401825008744        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -99,13 +99,13 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:29     ; 1.0                     ; 4740 MB             ; 00:00:55                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 5263 MB             ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 4740 MB             ; 00:00:55                           ;
+; Fitter                    ; 00:00:18     ; 1.1                     ; 5278 MB             ; 00:00:19                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 4682 MB             ; 00:00:02                           ;
-; Power Analyzer            ; 00:00:05     ; 1.0                     ; 4787 MB             ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 4746 MB             ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4642 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:56     ; --                      ; --                  ; 00:01:23                           ;
+; Power Analyzer            ; 00:00:09     ; 1.1                     ; 4790 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 4755 MB             ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4647 MB             ; 00:00:03                           ;
+; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

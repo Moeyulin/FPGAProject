@@ -4,19 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Q0",
+					"name" : "led",
 					"strict" : false
 				},
 				{
-					"name" : "Q1",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "A",
-					"strict" : false
-				},
-				{
-					"name" : "B",
+					"name" : "rst",
 					"strict" : false
 				}
 			]

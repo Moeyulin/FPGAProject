@@ -2,12 +2,13 @@
 -- changeable_counter
 -- end_signature
 WIDTH=7;
-DEPTH=10;
+DEPTH=11;
 
 ADDRESS_RADIX=UNS;
 DATA_RADIX=BIN;
 
 CONTENT BEGIN
+	10 :	1110111;
 	9 :	1101111;
 	8 :	1111111;
 	7 :	0000111;

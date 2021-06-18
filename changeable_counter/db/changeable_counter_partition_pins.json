@@ -60,7 +60,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "breath_led",
+					"strict" : false
+				},
+				{
+					"name" : "status_led_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "status_led_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "count_led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "recount",
 					"strict" : false
 				},
 				{
@@ -76,7 +120,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "hold",
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "set_2",
 					"strict" : false
 				}
 			]

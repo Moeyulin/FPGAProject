@@ -1,15 +1,15 @@
-Fitter Status : Successful - Wed Jun 09 22:42:50 2021
+Fitter Status : Successful - Fri Jun 18 20:11:37 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : changeable_counter
 Top-level Entity Name : changeable_counter
 Family : MAX 10
 Device : 10M02SCM153C8G
 Timing Models : Final
-Total logic elements : 72 / 2,304 ( 3 % )
-    Total combinational functions : 67 / 2,304 ( 3 % )
-    Dedicated logic registers : 34 / 2,304 ( 1 % )
-Total registers : 34
-Total pins : 23 / 112 ( 21 % )
+Total logic elements : 271 / 2,304 ( 12 % )
+    Total combinational functions : 269 / 2,304 ( 12 % )
+    Dedicated logic registers : 91 / 2,304 ( 4 % )
+Total registers : 91
+Total pins : 36 / 112 ( 32 % )
 Total virtual pins : 0
 Total memory bits : 0 / 110,592 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 32 ( 0 % )

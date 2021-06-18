@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test
-Thu May 13 16:07:26 2021
+Fri Jun 18 19:29:10 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,10 +13,13 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |test
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +45,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 13 16:07:26 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 18 19:29:10 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; test                                        ;
 ; Top-level Entity Name              ; test                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3                                           ;
-;     Total combinational functions  ; 3                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 8                                           ;
+; Total logic elements               ; 266                                         ;
+;     Total combinational functions  ; 265                                         ;
+;     Dedicated logic registers      ; 91                                          ;
+; Total registers                    ; 91                                          ;
+; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +69,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; 10M08SCM153C8G     ;                    ;
+; Device                                                                     ; 10M02SCM153C8G     ;                    ;
 ; Top-level entity name                                                      ; test               ; test               ;
 ; Family name                                                                ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -156,52 +159,53 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                        ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path          ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
-; test.v                           ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/Project/test/test.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
+; test.v                           ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/FPGAProject/test/test.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 3          ;
-;                                             ;            ;
-; Total combinational functions               ; 3          ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 1          ;
-;     -- 3 input functions                    ; 1          ;
-;     -- <=2 input functions                  ; 1          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 3          ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 8          ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; G[3]~input ;
-; Maximum fan-out                             ; 4          ;
-; Total fan-out                               ; 21         ;
-; Average fan-out                             ; 1.11       ;
-+---------------------------------------------+------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 266       ;
+;                                             ;           ;
+; Total combinational functions               ; 265       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 92        ;
+;     -- 3 input functions                    ; 97        ;
+;     -- <=2 input functions                  ; 76        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 156       ;
+;     -- arithmetic mode                      ; 109       ;
+;                                             ;           ;
+; Total registers                             ; 91        ;
+;     -- Dedicated logic registers            ; 91        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 36        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 76        ;
+; Total fan-out                               ; 1192      ;
+; Average fan-out                             ; 2.79      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,9 +213,88 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |test                      ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 8    ; 0            ; 0          ; |test               ; test        ; work         ;
+; |test                      ; 265 (265)           ; 91 (91)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 36   ; 0            ; 0          ; |test               ; test        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                            ;
++----------------------------------------+--------------------------------------+
+; Register name                          ; Reason for Removal                   ;
++----------------------------------------+--------------------------------------+
+; seg~0                                  ; Stuck at GND due to stuck port clock ;
+; seg~1                                  ; Stuck at GND due to stuck port clock ;
+; seg~2                                  ; Stuck at GND due to stuck port clock ;
+; seg~3                                  ; Stuck at GND due to stuck port clock ;
+; seg~4                                  ; Stuck at GND due to stuck port clock ;
+; seg~5                                  ; Stuck at GND due to stuck port clock ;
+; seg~6                                  ; Stuck at GND due to stuck port clock ;
+; seg~7                                  ; Stuck at GND due to stuck port clock ;
+; seg~8                                  ; Stuck at GND due to stuck port clock ;
+; seg~9                                  ; Stuck at GND due to stuck port clock ;
+; seg~10                                 ; Stuck at GND due to stuck port clock ;
+; seg~11                                 ; Stuck at GND due to stuck port clock ;
+; seg~12                                 ; Stuck at GND due to stuck port clock ;
+; seg~13                                 ; Stuck at GND due to stuck port clock ;
+; seg~14                                 ; Stuck at GND due to stuck port clock ;
+; seg~15                                 ; Stuck at GND due to stuck port clock ;
+; seg~16                                 ; Stuck at GND due to stuck port clock ;
+; seg~17                                 ; Stuck at GND due to stuck port clock ;
+; seg~18                                 ; Stuck at GND due to stuck port clock ;
+; seg~19                                 ; Stuck at GND due to stuck port clock ;
+; seg~20                                 ; Stuck at GND due to stuck port clock ;
+; seg~21                                 ; Stuck at GND due to stuck port clock ;
+; seg~22                                 ; Stuck at GND due to stuck port clock ;
+; seg~23                                 ; Stuck at GND due to stuck port clock ;
+; seg~24                                 ; Stuck at GND due to stuck port clock ;
+; seg~25                                 ; Stuck at GND due to stuck port clock ;
+; seg~26                                 ; Stuck at GND due to stuck port clock ;
+; seg~27                                 ; Stuck at GND due to stuck port clock ;
+; seg~28                                 ; Stuck at GND due to stuck port clock ;
+; seg~29                                 ; Stuck at GND due to stuck port clock ;
+; seg~30                                 ; Stuck at GND due to stuck port clock ;
+; seg~31                                 ; Stuck at GND due to stuck port clock ;
+; seg~32                                 ; Stuck at GND due to stuck port clock ;
+; seg~33                                 ; Stuck at GND due to stuck port clock ;
+; seg~34                                 ; Stuck at GND due to stuck port clock ;
+; seg~35                                 ; Stuck at GND due to stuck port clock ;
+; seg~36                                 ; Stuck at GND due to stuck port clock ;
+; seg~37                                 ; Stuck at GND due to stuck port clock ;
+; seg~38                                 ; Stuck at GND due to stuck port clock ;
+; seg~39                                 ; Stuck at GND due to stuck port clock ;
+; seg~40                                 ; Stuck at GND due to stuck port clock ;
+; seg~41                                 ; Stuck at GND due to stuck port clock ;
+; seg~42                                 ; Stuck at GND due to stuck port clock ;
+; seg~43                                 ; Stuck at GND due to stuck port clock ;
+; seg~44                                 ; Stuck at GND due to stuck port clock ;
+; seg~45                                 ; Stuck at GND due to stuck port clock ;
+; seg~46                                 ; Stuck at GND due to stuck port clock ;
+; seg~47                                 ; Stuck at GND due to stuck port clock ;
+; seg~48                                 ; Stuck at GND due to stuck port clock ;
+; seg~49                                 ; Stuck at GND due to stuck port clock ;
+; seg~50                                 ; Stuck at GND due to stuck port clock ;
+; seg~51                                 ; Stuck at GND due to stuck port clock ;
+; seg~52                                 ; Stuck at GND due to stuck port clock ;
+; seg~53                                 ; Stuck at GND due to stuck port clock ;
+; seg~54                                 ; Stuck at GND due to stuck port clock ;
+; seg~55                                 ; Stuck at GND due to stuck port clock ;
+; seg~56                                 ; Stuck at GND due to stuck port clock ;
+; seg~57                                 ; Stuck at GND due to stuck port clock ;
+; seg~58                                 ; Stuck at GND due to stuck port clock ;
+; seg~59                                 ; Stuck at GND due to stuck port clock ;
+; seg~60                                 ; Stuck at GND due to stuck port clock ;
+; seg~61                                 ; Stuck at GND due to stuck port clock ;
+; seg~62                                 ; Stuck at GND due to stuck port clock ;
+; seg~63                                 ; Stuck at GND due to stuck port clock ;
+; seg~64                                 ; Stuck at GND due to stuck port clock ;
+; seg~65                                 ; Stuck at GND due to stuck port clock ;
+; seg~66                                 ; Stuck at GND due to stuck port clock ;
+; seg~67                                 ; Stuck at GND due to stuck port clock ;
+; seg~68                                 ; Stuck at GND due to stuck port clock ;
+; seg~69                                 ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 70 ;                                      ;
++----------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -219,14 +302,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 91    ;
+; Number of registers using Synchronous Clear  ; 50    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 63    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |test|breath_cnt2[23]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |test|cnt_led[2]           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |test|cnt[5]               ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |test|cnt_ge[1]            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |test|cnt_shi[1]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |test ;
++----------------+---------+-------------------------------------------+
+; Parameter Name ; Value   ; Type                                      ;
++----------------+---------+-------------------------------------------+
+; PERIOD1        ; 1500000 ; Signed Integer                            ;
+; PERIOD2        ; 6000000 ; Signed Integer                            ;
+; BREATH         ; 4800    ; Signed Integer                            ;
++----------------+---------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -234,15 +342,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 8                           ;
-; cycloneiii_lcell_comb ; 3                           ;
-;     normal            ; 3                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
+; boundary_port         ; 36                          ;
+; cycloneiii_ff         ; 91                          ;
+;     CLR               ; 8                           ;
+;     CLR SCLR          ; 25                          ;
+;     ENA               ; 2                           ;
+;     ENA CLR           ; 30                          ;
+;     SCLR              ; 25                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 284                         ;
+;     arith             ; 109                         ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 57                          ;
+;     normal            ; 175                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 23                          ;
+;         2 data inputs ; 18                          ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 92                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 9.40                        ;
+; Average LUT depth     ; 4.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -261,27 +381,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu May 13 16:06:56 2021
+    Info: Processing started: Fri Jun 18 19:28:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file test.v
-    Info (12023): Found entity 1: test File: D:/intelFPGA_lite/Project/test/test.v Line: 1
+    Info (12023): Found entity 1: test File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file verilog1.v
-    Info (12023): Found entity 1: _4bitAdder File: D:/intelFPGA_lite/Project/test/Verilog1.v Line: 1
-    Info (12023): Found entity 2: _1bitAdder File: D:/intelFPGA_lite/Project/test/Verilog1.v Line: 13
+    Info (12023): Found entity 1: _4bitAdder File: D:/intelFPGA_lite/FPGAProject/test/Verilog1.v Line: 1
+    Info (12023): Found entity 2: _1bitAdder File: D:/intelFPGA_lite/FPGAProject/test/Verilog1.v Line: 13
 Info (12127): Elaborating entity "test" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at test.v(83): truncated value with size 32 to match size of target (24) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 83
+Warning (10230): Verilog HDL assignment warning at test.v(90): truncated value with size 32 to match size of target (24) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 90
+Warning (10230): Verilog HDL assignment warning at test.v(121): truncated value with size 32 to match size of target (25) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 121
+Warning (10230): Verilog HDL assignment warning at test.v(126): truncated value with size 32 to match size of target (25) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 126
+Warning (10240): Verilog HDL Always Construct warning at test.v(135): inferring latch(es) for variable "moSet_shi", which holds its previous value in one or more paths through the always construct File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Warning (10240): Verilog HDL Always Construct warning at test.v(135): inferring latch(es) for variable "moSet_ge", which holds its previous value in one or more paths through the always construct File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Warning (10230): Verilog HDL assignment warning at test.v(208): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 208
+Warning (10230): Verilog HDL assignment warning at test.v(213): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 213
+Warning (10230): Verilog HDL assignment warning at test.v(221): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 221
+Warning (10230): Verilog HDL assignment warning at test.v(230): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 230
+Warning (10230): Verilog HDL assignment warning at test.v(235): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 235
+Warning (10230): Verilog HDL assignment warning at test.v(243): truncated value with size 32 to match size of target (4) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 243
+Warning (10030): Net "seg.data_a" at test.v(30) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 30
+Warning (10030): Net "seg.waddr_a" at test.v(30) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 30
+Warning (10030): Net "led.data_a" at test.v(31) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 31
+Warning (10030): Net "led.waddr_a" at test.v(31) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 31
+Warning (10030): Net "seg.we_a" at test.v(30) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 30
+Warning (10030): Net "led.we_a" at test.v(31) has no driver or initial value, using a default initial value '0' File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 31
+Info (10041): Inferred latch for "moSet_ge[0]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Info (10041): Inferred latch for "moSet_ge[1]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Info (10041): Inferred latch for "moSet_ge[2]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Info (10041): Inferred latch for "moSet_ge[3]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Info (10041): Inferred latch for "moSet_shi[0]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Info (10041): Inferred latch for "moSet_shi[1]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Info (10041): Inferred latch for "moSet_shi[2]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Info (10041): Inferred latch for "moSet_shi[3]" at test.v(135) File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 135
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (10) in the Memory Initialization File "D:/intelFPGA_lite/FPGAProject/test/db/test.ram0_test_41f02b.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (9) in the Memory Initialization File "D:/intelFPGA_lite/FPGAProject/test/db/test.ram1_test_41f02b.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276013): RAM logic "seg" is uninferred because MIF is not supported for the selected family File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 30
+    Info (276013): RAM logic "led" is uninferred because MIF is not supported for the selected family File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 31
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "cnt_shi[0]" is converted into an equivalent circuit using register "cnt_shi[0]~_emulated" and latch "cnt_shi[0]~1" File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 205
+    Warning (13310): Register "cnt_shi[1]" is converted into an equivalent circuit using register "cnt_shi[1]~_emulated" and latch "cnt_shi[1]~5" File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 205
+    Warning (13310): Register "cnt_shi[2]" is converted into an equivalent circuit using register "cnt_shi[2]~_emulated" and latch "cnt_shi[2]~9" File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 205
+    Warning (13310): Register "cnt_shi[3]" is converted into an equivalent circuit using register "cnt_shi[3]~_emulated" and latch "cnt_shi[3]~13" File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 205
+    Warning (13310): Register "cnt_ge[2]" is converted into an equivalent circuit using register "cnt_ge[2]~_emulated" and latch "cnt_ge[2]~1" File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 205
+    Warning (13310): Register "cnt_led[3]" is converted into an equivalent circuit using register "cnt_led[3]~_emulated" and latch "cnt_led[3]~1" File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 205
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_led_1[7]" is stuck at GND File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 20
+    Warning (13410): Pin "seg_led_1[8]" is stuck at GND File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 20
+    Warning (13410): Pin "seg_led_2[7]" is stuck at GND File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 20
+    Warning (13410): Pin "seg_led_2[8]" is stuck at GND File: D:/intelFPGA_lite/FPGAProject/test/test.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 3 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4752 megabytes
-    Info: Processing ended: Thu May 13 16:07:26 2021
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:59
+Info (21057): Implemented 302 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 266 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4756 megabytes
+    Info: Processing ended: Fri Jun 18 19:29:10 2021
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:54
 
 

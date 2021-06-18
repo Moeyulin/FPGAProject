@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Jun 09 18:32:33 2021
+Analysis & Synthesis Status : Successful - Fri Jun 18 16:01:38 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : test1
 Top-level Entity Name : test1
 Family : MAX 10
-Total logic elements : 2
-    Total combinational functions : 2
-    Dedicated logic registers : 2
-Total registers : 2
+Total logic elements : 103
+    Total combinational functions : 103
+    Dedicated logic registers : 51
+Total registers : 51
 Total pins : 4
 Total virtual pins : 0
 Total memory bits : 0

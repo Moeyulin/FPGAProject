@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Wed Jun 09 22:43:01 2021
+Power Analyzer Status : Successful - Fri Jun 18 20:11:52 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : changeable_counter
 Top-level Entity Name : changeable_counter
 Family : MAX 10
 Device : 10M02SCM153C8G
 Power Models : Final
-Total Thermal Power Dissipation : 113.80 mW
+Total Thermal Power Dissipation : 114.40 mW
 Core Dynamic Thermal Power Dissipation : 0.00 mW
 Core Static Thermal Power Dissipation : 66.85 mW
-I/O Thermal Power Dissipation : 46.95 mW
+I/O Thermal Power Dissipation : 47.54 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data
