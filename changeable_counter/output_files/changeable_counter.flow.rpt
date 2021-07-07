@@ -1,5 +1,5 @@
 Flow report for changeable_counter
-Fri Jun 18 20:12:04 2021
+Sat Jun 19 18:00:01 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 18 20:12:04 2021       ;
+; Flow Status                        ; Successful - Sat Jun 19 18:00:01 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; changeable_counter                          ;
 ; Top-level Entity Name              ; changeable_counter                          ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/18/2021 20:10:52 ;
+; Start date & time ; 06/19/2021 17:58:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; changeable_counter  ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 167690709091374.162401825008744        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 167690709091374.162409671318292        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -99,13 +99,13 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 4740 MB             ; 00:00:55                           ;
-; Fitter                    ; 00:00:18     ; 1.1                     ; 5278 MB             ; 00:00:19                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4682 MB             ; 00:00:02                           ;
-; Power Analyzer            ; 00:00:09     ; 1.1                     ; 4790 MB             ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.1                     ; 4755 MB             ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4647 MB             ; 00:00:03                           ;
-; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:35                           ;
+; Analysis & Synthesis      ; 00:00:37     ; 1.0                     ; 4760 MB             ; 00:01:03                           ;
+; Fitter                    ; 00:00:22     ; 1.1                     ; 5293 MB             ; 00:00:23                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4684 MB             ; 00:00:02                           ;
+; Power Analyzer            ; 00:00:07     ; 1.1                     ; 4790 MB             ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.1                     ; 4749 MB             ; 00:00:08                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4646 MB             ; 00:00:04                           ;
+; Total                     ; 00:01:19     ; --                      ; --                  ; 00:01:47                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
